@@ -8,6 +8,26 @@ but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world st
   -set ip addresses for each node
 2 set up micro K8s cluster across nodes
 
+# Raspberry Pi4 Headless Server set-up x 4
+## Manual set up
+Utilized Raspberry Pi Imager to create Ubuntu 20.04.3 LTS .IMG SD cards
+After .IMG is complete go into boot directory and add SSH file (no extension)
+This will enable SSH.  
+
+![image](https://user-images.githubusercontent.com/31022640/151653213-0727c446-f4c9-4a9e-a3d3-53e6ea39485d.png)
+
+
+Insert SD and power Pi, allowing time for initial boot sequence.
+SSH into unit.
+Enter default password and change when prompted.
+change hostname(s) 
+```
+hostnamectl set-hostname [<name>]
+```
+Voila
+
+![image](https://user-images.githubusercontent.com/31022640/151655643-eb9fd7dd-7dec-4edb-9a54-9fa7f09a2c7a.png)
+
 # Docker
 
 ## Security
