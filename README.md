@@ -3,11 +3,9 @@ but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world st
 
 
 # Basic Frame work
-
-1 create images and install images across all Pi 4s
-  -set ip addresses for each node
-2 set up micro K8s cluster across nodes
-
+- set up micro K8s cluster across nodes
+- configure master node
+- 
 # Raspberry Pi4 Headless Server set-up x 4
 ## Manual set up
 Utilized Raspberry Pi Imager to create Ubuntu 20.04.3 LTS .IMG SD cards
@@ -36,7 +34,7 @@ Voila
 
  ### test container with 
  
- CHeck for security rules 
+ Check for security rules 
  ```
  sudo auditctl -l
  ```
