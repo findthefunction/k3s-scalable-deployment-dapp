@@ -26,6 +26,16 @@ Voila
 
 ![image](https://user-images.githubusercontent.com/31022640/151655643-eb9fd7dd-7dec-4edb-9a54-9fa7f09a2c7a.png)
 
+# Kubernetes K3s 
+Enable cgroups, K3s needs this to start systemd service.
+You need to add a couple lines to the cmdline.txt file in boot directory
+```
+sudo nano /boot/firmware/cmdline.txt
+```
+and add
+```
+cgroup_memory=1 cgroup_enable=memory
+```
 # Docker
 
 ## Security
