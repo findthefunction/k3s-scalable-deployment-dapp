@@ -28,7 +28,8 @@ but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world st
  ```
  more /tmp/<name>.out
  ```
- Sample warning
+ Sample warning 
+ 
  [WARN] 1.1.5 - Ensure auditing is configured for Docker files and directories - /var/lib/docker (Automated)
  
  ### Create new rule
