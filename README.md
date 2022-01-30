@@ -27,7 +27,11 @@ Voila
 ![image](https://user-images.githubusercontent.com/31022640/151655643-eb9fd7dd-7dec-4edb-9a54-9fa7f09a2c7a.png)
 
 # Kubernetes K3s 
+
+Reference: https://medium.com/@prasenjitsarkar_79320/k3s-cluster-on-raspberry-pi-gotchas-14f781e7bf6c
+
 Enable cgroups, K3s needs this to start systemd service.
+
 You need to add a couple lines to the cmdline.txt file in boot directory
 ```
 sudo nano /boot/firmware/cmdline.txt
@@ -36,6 +40,26 @@ and add
 ```
 cgroup_memory=1 cgroup_enable=memory
 ```
+Master Node
+
+```
+curl -sfL https://get.k3s.io | sh -s - --bind-address <master node ip>
+```
+Get token for nodes
+
+```
+sudo cat /var/lib/rancher/k3s/server/node-token
+```
+
+Stack up nodes with this
+```
+curl -sfL https://get.k3s.io | K3S_URL=https://<master node ip>:6443 K3S_TOKEN=<node token> sh -
+```
+Check out your set up
+```
+sudo kubectl get nodes -o wide
+```
+
 # Docker
 
 ## Security
