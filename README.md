@@ -60,6 +60,8 @@ Check out your set up
 sudo kubectl get nodes -o wide
 ```
 
+![image](https://user-images.githubusercontent.com/31022640/151692452-a50518bf-4f34-4601-b0a5-6f6c97901c4a.png)
+
 # Docker
 
 ## Security
@@ -98,7 +100,7 @@ sudo kubectl get nodes -o wide
  ```
  diff /tmp/bench1.out /tmp/bench2.out
  ```
- ![image](https://user-images.githubusercontent.com/31022640/151647890-246aa4bd-2428-44d2-8008-14bb194a63f4.png) 
+![image](https://user-images.githubusercontent.com/31022640/151692498-a8bc1486-3d85-461e-86d7-836a090b9b98.png)
  
  You can see that we configured auditing correctly and mitigated a potential point of exploitation
  
