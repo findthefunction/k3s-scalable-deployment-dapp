@@ -62,7 +62,50 @@ sudo kubectl get nodes -o wide
 
 ![image](https://user-images.githubusercontent.com/31022640/151692452-a50518bf-4f34-4601-b0a5-6f6c97901c4a.png)
 
-# Docker
+# Container Deployment
+Using containerd to deploy a sample nginx server for load balancing etc.
+
+Sample .yaml file
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+Create Deployment
+```
+sudo kubectl apply -f deployment.yaml
+```
+Take a look
+```
+kubectl describe deployment nginx-deployment
+```
+List Pods 
+```
+kubectl get pods -l app=nginx
+```
+Scaling the Deployment
+```
+kubectl scale deployment/nginx-deployment --replicas=10
+```
+![image](https://user-images.githubusercontent.com/31022640/151693857-544e8198-6358-406f-93fb-b8b9a7d0cc46.png)
+
+Now we have ten
 
 ## Security
  - process restriction to limit user escalation (DevSecOps)
@@ -74,7 +117,9 @@ sudo kubectl get nodes -o wide
  ```
  sudo auditctl -l
  ```
- Run docker-bench-security.sh and store output to /tmp file
+ Run docker-bench-security.sh and store output to /tmp file 
+ 
+ Referenced: (https://github.com/docker/docker-bench-security/blob/master/docker-bench-security.sh)
  ```
  sudo ./docker-bench-security.sh > /tmp/<name>.out
  ```
