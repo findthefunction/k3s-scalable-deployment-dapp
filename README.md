@@ -3,7 +3,7 @@ but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world st
 
 
 # Basic Frame work
-- set up micro K8s cluster across nodes
+- set up k3s cluster across nodes
 - configure master node
 - 
 # Raspberry Pi4 Headless Server set-up x 4
