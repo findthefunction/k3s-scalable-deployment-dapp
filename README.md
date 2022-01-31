@@ -1,6 +1,7 @@
-# Coding with Reinus (DRAFT)
-but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world string from cache which gets it from db
-
+# k3s baremetal cluster for DevOps / Cloud deployment projects(DRAFT)
+Some references for ideas
+- https://github.com/dappuniversity
+- https://medium.com/ethereum-developers/the-ultimate-end-to-end-tutorial-to-create-and-deploy-a-fully-descentralized-dapp-in-ethereum-18f0cf6d7e0e
 
 ## Basic Frame work
 - set up k3s cluster across nodes
@@ -28,7 +29,9 @@ Voila
 
 ## Kubernetes K3s 
 
-- Reference: https://medium.com/@prasenjitsarkar_79320/k3s-cluster-on-raspberry-pi-gotchas-14f781e7bf6c
+Reference: -  https://medium.com/@prasenjitsarkar_79320/k3s-cluster-on-raspberry-pi-gotchas-14f781e7bf6c
+           -  https://www.rancher.co.jp/docs/k3s/latest/en/running/ 
+
 
 Enable cgroups, K3s needs this to start systemd service.
 - Reference: https://kubernetes.io/docs/setup/production-environment/container-runtimes/
