@@ -2,12 +2,12 @@
 but its like crazy CI/CD pipeline, clustered on kube lol gets the hello world string from cache which gets it from db
 
 
-# Basic Frame work
+## Basic Frame work
 - set up k3s cluster across nodes
 - configure master node
 - 
-# Raspberry Pi4 Headless Server set-up x 4
-## Manual set up
+## Raspberry Pi4 Headless Server set-up x 4
+### Manual set up
 Utilized Raspberry Pi Imager to create Ubuntu 20.04.3 LTS .IMG SD cards
 After .IMG is complete go into boot directory and add SSH file (no extension)
 This will enable SSH.  
@@ -26,11 +26,12 @@ Voila
 
 ![image](https://user-images.githubusercontent.com/31022640/151655643-eb9fd7dd-7dec-4edb-9a54-9fa7f09a2c7a.png)
 
-# Kubernetes K3s 
+## Kubernetes K3s 
 
-Reference: https://medium.com/@prasenjitsarkar_79320/k3s-cluster-on-raspberry-pi-gotchas-14f781e7bf6c
+- Reference: https://medium.com/@prasenjitsarkar_79320/k3s-cluster-on-raspberry-pi-gotchas-14f781e7bf6c
 
 Enable cgroups, K3s needs this to start systemd service.
+- Reference: https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
 You need to add a couple lines to the cmdline.txt file in boot directory
 ```
@@ -62,7 +63,7 @@ sudo kubectl get nodes -o wide
 
 ![image](https://user-images.githubusercontent.com/31022640/151692452-a50518bf-4f34-4601-b0a5-6f6c97901c4a.png)
 
-# Container Deployment
+## Container Deployment
 Using containerd to deploy a sample nginx server for load balancing etc.
 
 Sample .yaml file
