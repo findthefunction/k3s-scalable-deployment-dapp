@@ -1,4 +1,4 @@
-# k3s baremetal cluster for DevOps / Cloud deployment projects(DRAFT)
+# k3s | scalable deployment | dapp (DRAFT)
 Some references for ideas
 - https://github.com/dappuniversity
 - https://medium.com/ethereum-developers/the-ultimate-end-to-end-tutorial-to-create-and-deploy-a-fully-descentralized-dapp-in-ethereum-18f0cf6d7e0e
