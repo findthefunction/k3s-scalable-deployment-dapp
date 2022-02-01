@@ -115,6 +115,23 @@ Now we have ten
  - process restriction to limit user escalation (DevSecOps)
  - -Set ulimit for container hardening
 
+### OWASP ZAP test
+
+Run application OWASP Zap instance via ssh
+
+```
+sudo sh run-zap.sh [private IP address running test subject]
+```
+Copy zapreport.html to apache web server directory (Root required to write to Apache Webroot directory)
+```
+sudo cp zapreport.html /var/www/html
+```
+View Report
+```
+http://[ZAP Public IP]/zapreport.html
+``` 
+
+
  ### test container with 
  
  Check for security rules 
